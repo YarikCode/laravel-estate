@@ -12,39 +12,47 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Навигационное меню -->
-        <nav class="py-2 bg-light border-bottom">
-            <div class="container d-flex flex-wrap">
-            <ul class="nav me-auto">
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">About</a></li>
-            </ul>
-            <ul class="nav">
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Login</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Sign up</a></li>
-            </ul>
+    <!-- Навигационное меню -->
+    <nav class="py-2 bg-light border-bottom">
+        <div class="container d-flex flex-wrap">
+          <ul class="nav me-auto">
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">Главная</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Домашняя страница</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Недвижимость</a></li>
+          </ul>
+          <ul class="nav d-flex align-items-center">
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Войти</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Зарегистрироваться</a></li>
+            <div class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle show" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="true">
+                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" data-popper-placement="bottom-end" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(-110px, 34px);">
+                  <li><a class="dropdown-item" href="#">Домашняя страница</a></li>
+                  <li><a class="dropdown-item" href="#">Главная</a></li>
+                  <li><a class="dropdown-item" href="#">Недвижимость</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Выйти</a></li>
+                </ul>
             </div>
-        </nav>
-        <!-- Заголовок -->
-        <header class="py-3 mb-4 border-bottom">
-            <div class="container d-flex flex-wrap justify-content-center">
-            <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                <span class="fs-4">Double header</span>
-            </a>
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0">
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-            </form>
-            </div>
-        </header>
-    </div>
+          </ul>
+        </div>
+    </nav>  
+
+    <!-- Шапка сайта -->
+    <header class="py-3">
+        <div class="container d-flex flex-wrap justify-content-center">
+          <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+            <span class="fs-4 ps-2">Продажа и аренда недвижимости</span>
+          </a>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0">
+            <input type="search" class="form-control" placeholder="Поиск..." aria-label="Search">
+          </form>
+        </div>
+    </header>
     
     <!-- Основной контент -->
-    <div class="container">
+    <div>
         @yield('main')
     </div>
 </body>

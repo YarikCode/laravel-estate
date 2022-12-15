@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Inter-Light;
+    src: url("/fonts/Inter-Light.ttf");
+}
+
+@font-face {
+    font-family: Inter-Bold;
+    src: url("/fonts/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: Inter-Medium;
+    src: url("/fonts/Inter-Medium.ttf");
+}
+
+.text{
+    font-family: Inter-Light;
+}
+
+.title{
+    font-family: Inter-Bold;
+}
+
+.index_image{
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+}
