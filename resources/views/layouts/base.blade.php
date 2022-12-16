@@ -12,43 +12,43 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <!-- Навигационное меню -->
-    <nav class="py-2 bg-light border-bottom">
-        <div class="container d-flex flex-wrap">
-          <ul class="nav me-auto">
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">Главная</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Домашняя страница</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Недвижимость</a></li>
-          </ul>
-          <ul class="nav d-flex align-items-center">
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Войти</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Зарегистрироваться</a></li>
-            <div class="dropdown text-end">
-                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle show" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="true">
-                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                </a>
-                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" data-popper-placement="bottom-end" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(-110px, 34px);">
-                  <li><a class="dropdown-item" href="#">Домашняя страница</a></li>
-                  <li><a class="dropdown-item" href="#">Главная</a></li>
-                  <li><a class="dropdown-item" href="#">Недвижимость</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Выйти</a></li>
-                </ul>
-            </div>
-          </ul>
-        </div>
-    </nav>  
-
     <!-- Шапка сайта -->
-    <header class="py-3">
-        <div class="container d-flex flex-wrap justify-content-center">
-          <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
-            <span class="fs-4 ps-2">Продажа и аренда недвижимости</span>
-          </a>
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0">
-            <input type="search" class="form-control" placeholder="Поиск..." aria-label="Search">
-          </form>
-        </div>
+    <header>
+      <nav class="py-2 bg-light border-bottom">
+          <div class="container d-flex flex-wrap">
+            <ul class="nav me-auto">
+              <li class="nav-item text"><a href="{{ route('index') }}" class="nav-link link-dark px-2 active" aria-current="page">Главная</a></li>
+              @auth
+                <li class="nav-item text"><a href="{{ route('home') }}" class="nav-link link-dark px-2">Домашняя страница</a></li>
+              @endauth
+              <li class="nav-item text"><a href="#" class="nav-link link-dark px-2">Недвижимость</a></li>
+            </ul>
+            <ul class="nav d-flex align-items-center">
+              @guest
+                <li class="nav-item text"><a href="{{ route('login') }}" class="nav-link link-dark px-2">Войти</a></li>
+                <li class="nav-item text"><a href="{{ route('register') }}" class="nav-link link-dark px-2">Зарегистрироваться</a></li>
+              @endguest
+              @auth
+                <div class="dropdown text-end d-flex align-items-center">
+                  <p class="text m-0 me-2">{{ Auth::user()->name }}</p>
+                  <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle show" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="true">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" data-popper-placement="bottom-end" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(-110px, 34px);">
+                    <li><a class="dropdown-item text" href="{{ route('home') }}">Домашняя страница</a></li>
+                    <li><a class="dropdown-item text" href="#">Главная</a></li>
+                    <li><a class="dropdown-item text" href="#">Недвижимость</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><form action="{{ route('logout') }}" method="POST">
+                      @csrf
+                      <input type="submit" class="dropdown-item text" value="Выйти">
+                    </form></li>
+                  </ul>
+                </div>
+              @endauth
+            </ul>
+          </div>
+      </nav>
     </header>
     
     <!-- Основной контент -->

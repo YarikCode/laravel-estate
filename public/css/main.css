@@ -13,16 +13,74 @@
     src: url("/fonts/Inter-Medium.ttf");
 }
 
+@font-face {
+    font-family: Inter-Extra-Light;
+    src: url("/fonts/Inter-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: Montserrat-Light;
+    src: url("/fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url("/fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: Montserrat-ExtraLight;
+    src: url("/fonts/Montserrat-ExtraLight.ttf");
+}
+
 .text{
     font-family: Inter-Light;
+}
+
+.light_text{
+    font-family: Inter-Extra-Light;
 }
 
 .title{
     font-family: Inter-Bold;
 }
 
+.montserrat_light{
+    font-family: Montserrat-Light;
+}
+
+.montserrat_bold{
+    font-family: Montserrat-Bold;
+}
+
+.montserrat_extraLight{
+    font-family: Montserrat-ExtraLight;
+}
+
 .index_image{
     background-size: cover;
-    height: 300px;
+    height: 250px;
     background-position: center;
+}
+
+.col_index_image{
+    background-size: cover;
+    height: 400px;
+    background-position: center;
+}
+
+.all_height_image{
+    background-size: cover;
+    min-height: 100vh;
+    background-size: center;
+}
+
+.media_text{
+    max-width: 40%;
+}
+
+@media (max-width: 767.98px){ 
+    .media_text{
+        max-width: 95%;
+    }
 }
