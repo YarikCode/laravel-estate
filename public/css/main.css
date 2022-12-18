@@ -79,6 +79,43 @@
     max-width: 40%;
 }
 
+.header{
+    background-color: rgb(255, 255, 255);
+}
+
+.content{
+    background-color: rgb(231, 231, 231);
+    min-height: 100vh;
+}
+
+.content_block{
+    background-color: rgb(255, 255, 255);
+}
+
+.home_user_image{
+    width: 250px;
+    height: 250px;
+    border-radius: 100px;
+}
+
+.custom_button{
+    font-family: Montserrat-Light;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(142, 90, 166);
+    border: none;
+    border-radius: 30px;
+}
+
+.white_custom_button{
+    font-family: Montserrat-Bold;
+    color: rgb(142, 90, 166);
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    border: 1px solid rgb(142, 90, 166);
+    border-radius: 30px;
+}
+
 @media (max-width: 767.98px){ 
     .media_text{
         max-width: 95%;

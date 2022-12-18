@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
 
         // Создание пользователей
         $names = ['Иванов Ярослав Григорьевич', 'Фомин Ратибор Дмитриевич'];
-        $emails = ['yarosla.yarosl.ivanov@mail.ru', 'ratiborfomin903@mail.ru'];
+        $emails = ['yaroslav.yarosl.ivanov@mail.ru', 'ratiborfomin903@mail.ru'];
         $numbers = ['+7 (964) 922-38-71', '+7 (935) 730-70-44'];
         $password = Hash::make('user');
 
